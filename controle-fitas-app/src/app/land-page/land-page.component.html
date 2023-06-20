@@ -1,0 +1,70 @@
+<!-- intro -->
+<div
+  class="intro z-depth-1 my-logo-text">
+  <h1 class="amber-text-title  text-lighten-5">Controle de Fitas Nintendo</h1>
+  <h4 class="amber-text-h2 text-darken-1">Mais facilidade para gerenciar sua coleção</h4>
+  <h5 class="amber-text text-darken-1" [style.backgroundColor]="'black'">
+    Só hoje recebemos um total de
+    <span id="tax-span" class="red-text">50000</span>
+    Fitas cadastradas
+  </h5>
+</div>
+<!-- intro -->
+
+<!-- container -->
+<div class="container about">
+  <!-- painel serviços  -->
+  <div id="painel-servicos" [hidden]="this.isHidePanel">
+    <h5>Serviços</h5>
+    <hr />
+    <div class="row">
+      <!-- serviços -->
+      <div class="col s12 m6">
+        <a href="#">
+          <div class="card-panel #311b92 deep-purple darken-4 accent-4 center my-card-button">
+            <span class="white-text flow-text"> SAQUE </span>
+          </div>
+        </a>
+      </div>
+      <div class="col s12 m6">
+        <a href="#">
+          <div class="card-panel #311b92 deep-purple darken-4 accent-4 center my-card-button">
+            <span class="white-text flow-text"> DEPÓSITO </span>
+          </div>
+        </a>
+      </div>
+      <div class="col s12 m6">
+        <a href="#">
+          <div class="card-panel #311b92 deep-purple darken-4 accent-4 center my-card-button">
+            <span class="white-text flow-text"> SALDO </span>
+          </div>
+        </a>
+      </div>
+      <div class="col s12 m6">
+        <a href="#">
+          <div class="card-panel #311b92 deep-purple darken-4 accent-4 center my-card-button">
+            <span class="white-text flow-text"> EXTRATO </span>
+          </div>
+        </a>
+      </div>
+      <!-- serviços -->
+    </div>
+    <!-- fim linha -->
+  </div>
+  <!-- fim painel serviços -->
+
+  <!-- painel login -->
+  <div id="painel-login" class="row">
+    <div class="col s12 m6 offset-m3">
+      <a routerLink="/login">
+        <div
+          id="botao-login"
+          class="card-panel #311b92 deep-purple darken-4 accent-4 center my-card-button">
+          <span class="white-text flow-text"> LOGIN </span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- fim painel login -->
+</div>
+<!-- fim container -->
