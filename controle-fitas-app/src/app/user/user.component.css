@@ -1,0 +1,22 @@
+
+h1{
+  font-size: 50px;
+  font-style: inherit;
+  color: rgb(30, 63, 90);
+  padding: 20px;
+  text-align: center;
+}
+
+h6{
+  font-size: 20px;
+  font-style: italic;
+  color: blueviolet;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.cadastro{
+  text-align: center;
+}
+

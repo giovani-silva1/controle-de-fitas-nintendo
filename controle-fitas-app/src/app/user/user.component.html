@@ -1,5 +1,5 @@
-<div class="container contact">
-  <h5>Cadastro de Usuários</h5>
+<div class=" container contact">
+  <h1>Cadastro de Usuários</h1>
   <h6>Entre com os dados do usuário</h6>
   <hr />
   <div class="row">
@@ -30,10 +30,13 @@
         <div class="red-text" [hidden]="name.valid || name.untouched">
           Por favor, informe o seu nome completo.
         </div>
+        <div class="red-text" *ngIf="name.errors?.required && name.touched">
+          Por favor, o nome completo é obrigatório.
+        </div>
         <span
           class="helper-text"
           data-error="O campo é inválido"
-          data-success="Ok!"
+          data-success="Nome permitido para cadastro!"
         ></span>
       </div>
 
@@ -100,6 +103,7 @@
           [(ngModel)]="this.user.cpf"
           pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
           mask="CPF_CNPJ"
+          [dropSpecialCharacters]="false"
           #cpf="ngModel"
           required
         />
@@ -139,16 +143,17 @@
         <th>Nome Completo</th>
         <th>Nome de usuário</th>
         <th>CPF</th>
-        <th>Saldo</th>
+        <th>Quantidade</th>
         <th></th>
       </tr>
     </thead>
 
     <tbody>
       <tr *ngFor="let u of users">
-        <td>{{ u.name }}</td>
-        <td>{{ u.username }}</td>
-        <td>{{ u.cpf }}</td>
+        <td>{{ u.name  }}</td>
+        <td>{{ u.username  }}</td>
+        <td>{{ u!.cpf!  }}</td>
+        <td>{{ u.quantidadeFitas }}</td>
         <td class="right">
           <a
             ><i class="material-icons my-icon-size" (click)="onEdit(u)"
@@ -166,7 +171,3 @@
       </tr>
     </tbody>
   </table>
-
-
-
-

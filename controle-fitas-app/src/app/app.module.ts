@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { ProdutosDetalhesComponent } from './produtos-detalhes/produtos-detalhes.component';
 import { ProdutosAlertaComponent } from './produtos-alerta/produtos-alerta.component';
+
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import { ProdutosAlertaComponent } from './produtos-alerta/produtos-alerta.compo
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
