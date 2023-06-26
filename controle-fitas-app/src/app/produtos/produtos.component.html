@@ -1,0 +1,18 @@
+<h2>Fitas</h2>
+
+<div *ngFor="let fita of fitas">
+  <h2>
+    <a
+      [title]="fita.nome + ' details'"
+      [routerLink]="['/fita', fita.id]"
+    >
+      {{ fita.nome }}
+    </a>
+  </h2>
+
+  <p *ngIf="fita.nome">Nome fita: {{ fita.nome }}</p>
+  <p *ngIf="fita.quantidade">Quantidade: {{ fita.quantidade }}</p>
+  <app-produtos-alerta [fita]="fita" (notify)="onNotify()">
+  </app-produtos-alerta>
+
+</div>
