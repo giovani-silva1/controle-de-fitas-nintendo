@@ -1,35 +1,30 @@
-
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Constants } from 'src/app/util/constants';
 import { NgForm } from '@angular/forms';
 import { Shared } from '../util/shared';
 import { User } from './../model/user';
-import { UserService } from './user.service';
+import { UserStorageService } from './user-storage.service';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css'],
-  providers: [UserService],
+  providers: [UserStorageService],
 })
 export class UserComponent implements OnInit {
   @ViewChild('form') form!: NgForm;
 
   user!: User;
   users?: User[];
-
   userRepassword: string = '';
-
   isSubmitted!: boolean;
   isShowMessage: boolean = false;
   isSuccess!: boolean;
   message!: string;
 
-
-  constructor(private userService:UserService) {}
+  constructor(private userService: UserStorageService) {}
 
   ngOnInit(): void {
-    Shared.initializeUsers();
+    Shared.initializeWebStorage();
     this.user = new User('', '');
     this.users = this.userService.getUsers();
   }
@@ -38,33 +33,27 @@ export class UserComponent implements OnInit {
     this.isSubmitted = true;
     if (!this.userService.isExist(this.user.username)) {
       this.userService.save(this.user);
-      this.message = "Cadastro realizado com sucesso";
+      this.message = 'Cadastro realizado com sucesso!';
     } else {
       this.userService.update(this.user);
-      this.message = "Atualização dos dados do usuário realizado com sucesso";
+      this.message = 'Atualização de dados do usuário realizado com sucesso.';
     }
     this.isShowMessage = true;
     this.isSuccess = true;
-
-
     this.form.reset();
     this.user = new User('', '');
-
     this.users = this.userService.getUsers();
-
-
+    this.userService.notifyTotalUsers();
   }
 
-
   onEdit(user: User) {
-
     let clone = User.clone(user);
     this.user = clone;
   }
 
   onDelete(username: string) {
     let confirmation = window.confirm(
-      'Você tem certeza que deseja remover ' + username
+      'Confirma a remoção do usuário: ' + username
     );
     if (!confirmation) {
       return;
@@ -78,6 +67,6 @@ export class UserComponent implements OnInit {
       this.message = 'Opps! O item não pode ser removido!';
     }
     this.users = this.userService.getUsers();
-
+    this.userService.notifyTotalUsers();
   }
 }

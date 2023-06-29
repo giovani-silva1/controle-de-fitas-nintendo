@@ -1,0 +1,28 @@
+.login{
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 100px;
+  color: aliceblue;
+}
+
+.subLogin{
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 100px;
+  color: aliceblue;
+}
+
+.paginaLogin{
+  text-align: center;
+  padding-top: 13%;
+  padding-bottom: 13%;
+  min-height: 500px;
+  margin-bottom: 50px;
+  opacity: 0.8;
+  background-image: url("./../../assets/resources/img/CadastroUsuarios2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

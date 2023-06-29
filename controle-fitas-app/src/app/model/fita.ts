@@ -1,13 +1,19 @@
+
+
 export class Fita {
-  public id: number;
-  constructor(public nomeDigitado: string,public quantFitas: number,public date: Date) {
+  id: number;
+  date: Date;
+  constructor(public nome:string,public quantidadeFita: number,public produtora:string, public genero:string) {
     this.id = Math.round(Math.random() * 1000);
-    this.nomeDigitado = nomeDigitado;
-    this.quantFitas = quantFitas;
+    this.nome = nome;
+    this.quantidadeFita = quantidadeFita;
+    this.produtora = produtora;
+    this.genero = genero;
     this.date = new Date();
   }
-
 }
+
+
 
 
 export interface FitaObject {

@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { ProdutosDetalhesComponent } from './produtos-detalhes/produtos-detalhes.component';
 import { ProdutosAlertaComponent } from './produtos-alerta/produtos-alerta.component';
+import { TotalUsersComponent } from './user/total-users/total-users.component';
+import { LinkListFitasStatementComponent } from './link-list-fitas-statement/link-list-fitas-statement.component';
 
 
 
@@ -32,7 +34,9 @@ import { ProdutosAlertaComponent } from './produtos-alerta/produtos-alerta.compo
     UserComponent,
     ProdutosComponent,
     ProdutosDetalhesComponent,
-    ProdutosAlertaComponent
+    ProdutosAlertaComponent,
+    TotalUsersComponent,
+    LinkListFitasStatementComponent
   ],
   imports: [
     BrowserModule,

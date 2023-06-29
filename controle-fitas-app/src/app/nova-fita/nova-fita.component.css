@@ -1,0 +1,15 @@
+.titulo{
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 100px;
+  color: rgb(37, 118, 185);
+}
+
+.subTitulo{
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 100px;
+  color: rgb(9, 14, 17);
+}

@@ -10,3 +10,11 @@
   color: aliceblue;
   font-weight: 100px;
 }
+
+
+.servicos{
+  font-size: 45px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding:15px;
+  text-align: center;
+}

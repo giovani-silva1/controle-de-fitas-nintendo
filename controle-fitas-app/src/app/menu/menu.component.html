@@ -8,10 +8,11 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
           <i class="material-icons">menu</i>
         </a>
-        <ul class="right hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down" [hidden]="!this.loggedIn">
           <li><a routerLink="/novaFita" class="flow-text">Nova Fita</a></li>
           <li><a routerLink="/doarFita" class="flow-text">Doar Fita</a></li>
           <li><a routerLink="/fitas" class="flow-text">Fitas</a></li>
+          <li><a class="flow-text" (click)="onLogout()">Sair</a></li>
         </ul>
       </div>
     </div>
