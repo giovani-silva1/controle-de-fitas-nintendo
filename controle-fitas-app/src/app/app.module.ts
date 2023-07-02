@@ -19,6 +19,7 @@ import { ProdutosAlertaComponent } from './produtos-alerta/produtos-alerta.compo
 import { TotalUsersComponent } from './user/total-users/total-users.component';
 import { LinkListFitasStatementComponent } from './link-list-fitas-statement/link-list-fitas-statement.component';
 import { CommonModule } from '@angular/common';
+import { SemAutorizacaoComponent } from './sem-autorizacao/sem-autorizacao.component';
 
 
 
@@ -38,7 +39,8 @@ import { CommonModule } from '@angular/common';
     ProdutosDetalhesComponent,
     ProdutosAlertaComponent,
     TotalUsersComponent,
-    LinkListFitasStatementComponent
+    LinkListFitasStatementComponent,
+    SemAutorizacaoComponent
   ],
   imports: [
     CommonModule,

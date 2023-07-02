@@ -12,7 +12,6 @@
             <th data-field="td-quantidade">Quantidade</th>
             <th data-field="td-genero">Genero</th>
             <th data-field="td-produtora">Produtora</th>
-            <th data-field="td-date">Data</th>
           </tr>
         </thead>
 
@@ -22,7 +21,6 @@
             <td>{{ f.quantidadeFita}}</td>
             <td>{{ f.genero | titlecase }}</td>
             <td>{{ f.produtora | titlecase }}</td>
-            <td>{{ f.date | date:'shortTime'}}</td>
           </tr>
         </tbody>
       </table>
