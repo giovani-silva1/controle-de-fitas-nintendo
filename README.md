@@ -6,9 +6,12 @@ Projeto para realização do controle de fitas do video game Nintendo.
 https://www.figma.com/file/Fx1cAnsAYNBoh7DmJLTH4u/POSGRADUACAO---ESPECIALISTA-JAVA---PROT%C3%93TIPO-SISTEMA-DE-CONTROLE-DE-ESTOQUE-FITA-NINTENDO?type=design&node-id=3%3A2&t=Ppfpl5GirA0awbOU-1
 
 # Checklist
- Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop.
- Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro)
- Apresentar as telas com layout responsivo usando ou não algum framework CSS.
+ Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop.  
+
+ Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro)  
+
+ Apresentar as telas com layout responsivo usando ou não algum framework CSS.  
+
  Construir páginas web com o conceito de componentes.
  Criar o layout da aplicação com componentes, ou seja, o cabeçalho e rodapé precisam ser componentes.
  Usar pelo menos dois tipos de data-binding (Interpolation, Property Binding, Event Binding e Two Way Data Binding).
