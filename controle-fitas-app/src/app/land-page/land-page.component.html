@@ -14,46 +14,29 @@
 <!-- container -->
 <div class="container about">
   <!-- painel serviços  -->
-  <div id="painel-servicos" [hidden]="this.isHidePanel">
-    <h5>Serviços</h5>
+  <div id="painel-servicos" *ngIf="this.loggedIn">
+    <h5 class="servicos">Serviços</h5>
     <hr />
     <div class="row">
       <!-- serviços -->
       <div class="col s12 m6">
         <a href="#">
           <div class="card-panel #311b92 deep-purple darken-4 accent-4 center my-card-button">
-            <span class="white-text flow-text"> SAQUE </span>
+            <span class="white-text flow-text"><a routerLink="/novaFita">NOVA FITA</a></span>
           </div>
         </a>
       </div>
       <div class="col s12 m6">
         <a href="#">
           <div class="card-panel #311b92 deep-purple darken-4 accent-4 center my-card-button">
-            <span class="white-text flow-text"> DEPÓSITO </span>
+            <span class="white-text flow-text"><a routerLink="/fitas">FITAS</a></span>
           </div>
         </a>
       </div>
-      <div class="col s12 m6">
-        <a href="#">
-          <div class="card-panel #311b92 deep-purple darken-4 accent-4 center my-card-button">
-            <span class="white-text flow-text"> SALDO </span>
-          </div>
-        </a>
-      </div>
-      <div class="col s12 m6">
-        <a href="#">
-          <div class="card-panel #311b92 deep-purple darken-4 accent-4 center my-card-button">
-            <span class="white-text flow-text"> EXTRATO </span>
-          </div>
-        </a>
-      </div>
-      <!-- serviços -->
     </div>
-    <!-- fim linha -->
   </div>
-  <!-- fim painel serviços -->
 
-  <!-- painel login -->
+
   <div id="painel-login" class="row">
     <div class="col s12 m6 offset-m3">
       <a routerLink="/login">

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,9 @@ import { FormsModule } from '@angular/forms';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { ProdutosDetalhesComponent } from './produtos-detalhes/produtos-detalhes.component';
 import { ProdutosAlertaComponent } from './produtos-alerta/produtos-alerta.component';
+import { TotalUsersComponent } from './user/total-users/total-users.component';
+import { LinkListFitasStatementComponent } from './link-list-fitas-statement/link-list-fitas-statement.component';
+
 
 
 
@@ -32,7 +35,9 @@ import { ProdutosAlertaComponent } from './produtos-alerta/produtos-alerta.compo
     UserComponent,
     ProdutosComponent,
     ProdutosDetalhesComponent,
-    ProdutosAlertaComponent
+    ProdutosAlertaComponent,
+    TotalUsersComponent,
+    LinkListFitasStatementComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,7 @@ import { ProdutosAlertaComponent } from './produtos-alerta/produtos-alerta.compo
     FormsModule,
     NgxMaskModule.forRoot(),
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

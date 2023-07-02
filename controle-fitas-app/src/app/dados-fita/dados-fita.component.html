@@ -1,1 +1,31 @@
-<p>dados-fita works!</p>
+<div>
+  <h5 class="titulo">Listagem de Cadastro de Fitas</h5>
+  <hr />
+
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      <table>
+        <thead>
+          <tr>
+
+            <th data-field="td-nomeFita">Nome Fita</th>
+            <th data-field="td-quantidade">Quantidade</th>
+            <th data-field="td-genero">Genero</th>
+            <th data-field="td-produtora">Produtora</th>
+            <th data-field="td-date">Data</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let f of this.fitas">
+            <td>{{ f.nome}}</td>
+            <td>{{ f.quantidadeFita}}</td>
+            <td>{{ f.genero }}</td>
+            <td>{{ f.produtora }}</td>
+            <td>{{ f.date | date: "dd/MM/yyyy HH:mm:ss" }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

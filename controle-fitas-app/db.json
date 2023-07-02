@@ -1,0 +1,39 @@
+{
+  "fitas": [
+    {
+      "id": 1,
+      "nome": "Donkey Kong",
+      "quantidade": 10,
+      "genero": "acao",
+      "produtora": "Nintendo Solutions"
+    },
+    {
+      "id": 2,
+      "nome": "Warzone",
+      "quantidade": 5,
+      "genero": "FPS",
+      "produtora": "Activision"
+    },
+    {
+      "id": 3,
+      "nome": "Harry Potter",
+      "quantidade": 2,
+      "genero": "acao",
+      "produtora": "Warmer Bross"
+    },
+    {
+      "id": 4,
+      "nome": "Bomba Patch",
+      "quantidade": 2,
+      "genero": "Futebol",
+      "produtora": "Konami"
+    },
+    {
+      "id": 5,
+      "nome": "FITA BY JSONSERVER",
+      "quantidade": 2,
+      "genero": "acao",
+      "produtora": "POSTMAN"
+    }
+  ]
+}
