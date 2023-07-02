@@ -18,6 +18,7 @@ import { ProdutosDetalhesComponent } from './produtos-detalhes/produtos-detalhes
 import { ProdutosAlertaComponent } from './produtos-alerta/produtos-alerta.component';
 import { TotalUsersComponent } from './user/total-users/total-users.component';
 import { LinkListFitasStatementComponent } from './link-list-fitas-statement/link-list-fitas-statement.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -40,11 +41,13 @@ import { LinkListFitasStatementComponent } from './link-list-fitas-statement/lin
     LinkListFitasStatementComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     NgxMaskModule.forRoot(),
+
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]

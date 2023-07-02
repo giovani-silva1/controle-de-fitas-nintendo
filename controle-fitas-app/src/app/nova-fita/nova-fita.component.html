@@ -27,7 +27,7 @@
 
       <div class="input-field col s12 l6">
         <input id="input-cpf" name="input-cpf" type="text" class="validate" [(ngModel)]="this.fita.quantidadeFita"
-          mask="0000" #quantidadeFita="ngModel" required />
+          maxlength="4" #quantidadeFita="ngModel" required />
         <label for="input-quantidade">Quantidade</label>
         <div class="red-text" [hidden]="quantidadeFita.valid || quantidadeFita.untouched">
           Por favor, informe a quantidade.

@@ -148,9 +148,9 @@
 
     <tbody>
       <tr *ngFor="let u of users">
-        <td>{{ u.name }}</td>
+        <td>{{ u.name | uppercase}}</td>
         <td>{{ u.username }}</td>
-        <td>{{ u.cpf }}</td>
+        <td>{{ u.cpf}}</td>
         <td>{{ u.quantidadeFitas}}</td>
         <td class="right">
           <a
