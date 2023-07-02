@@ -9,6 +9,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { ProdutosDetalhesComponent } from './produtos-detalhes/produtos-detalhes.component';
 import { DadosFitaComponent } from './dados-fita/dados-fita.component';
 import { LinkListFitasStatementComponent } from './link-list-fitas-statement/link-list-fitas-statement.component';
+import { AuthenticationGuard } from './util/authentication.guard';
+import { SemAutorizacaoComponent } from './sem-autorizacao/sem-autorizacao.component';
 
 const routes: Routes = [{ path: '', component:LandPageComponent},
                         { path: 'doarFita',component:DoarFitaComponent },
@@ -26,14 +28,18 @@ const routes: Routes = [{ path: '', component:LandPageComponent},
                       },
                         { path: 'login', component: LoginComponent },
                         {
-                          path: 'a/usuarios',component: UserComponent
+                          path: 'a/usuarios',
+                          component: UserComponent,
+                          canActivate: [AuthenticationGuard],
                         },
                         { path: 'fitas', component: ProdutosComponent },
                         { path: 'fita/:fitaId', component: ProdutosDetalhesComponent},
+                        { path: 'nao-autorizado', component: SemAutorizacaoComponent },
 
                       ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthenticationGuard],
 })
 export class AppRoutingModule { }
