@@ -1,0 +1,82 @@
+<div class="container contact">
+  <h5 class="titulo">Cadastro de Fitas</h5>
+  <h6 class="subTitulo">
+    Ter um lugar para controle sua coleção é muito legal, não acha?!
+  </h6>
+  <hr />
+  <div class="row">
+    <div class="col s12">
+      <div class="card-panel white-text" [hidden]="!this.message" [class.red]="!this.success"
+        [class.blue]="this.success">
+        {{ this.message }}
+      </div>
+    </div>
+    <form class="col s12" #form="ngForm" (submit)="onSubmit()">
+
+      <div class="row">
+        <div class="input-field col s12 l6">
+          <input id="input-nome" name="input-name" type="text" class="validate" [(ngModel)]="this.fita.nome"
+            pattern="^(\s?[A-ZÀ-Ú][a-zà-ú]*)+(\s[a-zà-ú]*)?(\s[A-ZÀ-Ú][a-zà-ú]*)+" #nome="ngModel" required />
+          <label for="input-name">Nome Fita</label>
+          <div class="red-text" [hidden]="nome.valid || nome.untouched">
+            Por favor, informe o nome da fita a ser cadastrada.
+          </div>
+          <span class="helper-text" data-error="O campo é inválido" data-success="Ok!"></span>
+        </div>
+
+
+      <div class="input-field col s12 l6">
+        <input id="input-cpf" name="input-cpf" type="text" class="validate" [(ngModel)]="this.fita.quantidadeFita"
+          maxlength="4" #quantidadeFita="ngModel" required />
+        <label for="input-quantidade">Quantidade</label>
+        <div class="red-text" [hidden]="quantidadeFita.valid || quantidadeFita.untouched">
+          Por favor, informe a quantidade.
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="input-field  col s12 l6">
+          <input id="input-genero" name="input-genero" type="text" class="validate" [(ngModel)]="this.fita.genero"
+          pattern="^[a-z]+([\.-]?[a-z]+)*" #genero="ngModel" required />
+          <label for="input-genero">Genero</label>
+          <div class="red-text" [hidden]="genero.valid || genero.untouched">
+            Por favor, informe o genero da fita
+          </div>
+          <span class="helper-text" data-error="O campo é inválido" data-success="Ok!"></span>
+        </div>
+
+
+      <div class="row">
+        <div class="input-field col s12 l6">
+          <input id="input-produtora" name="input-produtora" type="text" class="validate"
+            [(ngModel)]="this.fita.produtora" pattern="^(\s?[A-ZÀ-Ú][a-zà-ú]*)+(\s[a-zà-ú]*)?(\s[A-ZÀ-Ú][a-zà-ú]*)+"
+            #produtora="ngModel" required />
+          <label for="input-produtora">produtora</label>
+          <div class="red-text" [hidden]="genero.valid || genero.untouched">
+            Por favor, informe a produtora da fita
+          </div>
+          <span class="helper-text" data-error="O campo é inválido" data-success="Ok!"></span>
+        </div>
+      </div>
+    </div>
+      <button
+      class="btn waves-effect waves-light #311b92 deep-purple darken-4 "
+      type="submit"
+      [disabled]="!form.valid"
+    >
+      Cadastrar Fita
+      <i class="material-icons right">add</i>
+    </button>
+
+    </form>
+  </div>
+  <router-outlet></router-outlet>
+  <!-- link home -->
+  <div id="painel-login" class="row">
+    <div class="col s12 m6 offset-m3 center">
+      <a routerLink="/"> VOLTAR AO MENU PRINCIPAL </a>
+    </div>
+  </div>
+  <!-- link home -->
+</div>

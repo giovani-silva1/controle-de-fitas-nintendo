@@ -1,0 +1,4 @@
+{
+  "/fitas": "/fitas",
+  "fitas/:id": "/fitas/:id"
+}
