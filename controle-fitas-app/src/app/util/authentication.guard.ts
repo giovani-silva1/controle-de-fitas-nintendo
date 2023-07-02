@@ -18,13 +18,11 @@ export class AuthenticationGuard  {
     let user: User = WebStorageUtil.get(Constants.USERNAME_KEY) as User;
 
     if (!user) {
-      //redireciona para uma view para explicar o que aconteceu
       this.router.navigateByUrl('/nao-autorizado');
       return false;
     }
 
     if (!user.isAdmin) {
-      //redireciona para uma view para explicar o que aconteceu
       this.router.navigateByUrl('/nao-autorizado');
       return false;
     }
