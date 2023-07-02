@@ -25,6 +25,7 @@ export class UserComponent implements OnInit {
   isSuccess!: boolean;
   message!: string;
 
+
   constructor(private userService:UserService) {}
 
   ngOnInit(): void {
@@ -37,12 +38,14 @@ export class UserComponent implements OnInit {
     this.isSubmitted = true;
     if (!this.userService.isExist(this.user.username)) {
       this.userService.save(this.user);
+      this.message = "Cadastro realizado com sucesso";
     } else {
       this.userService.update(this.user);
+      this.message = "Atualização dos dados do usuário realizado com sucesso";
     }
     this.isShowMessage = true;
     this.isSuccess = true;
-    this.message = 'Cadastro realizado com sucesso!';
+
 
     this.form.reset();
     this.user = new User('', '');
