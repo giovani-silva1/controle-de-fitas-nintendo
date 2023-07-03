@@ -34,7 +34,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   padding-bottom: 13%;
   min-height: 500px;
   margin-bottom: 50px;
-  background-image: url("./assets/resources/img/jogandoNintendo.jpg");
+  background-image: url("./assets/images/jogandoNintendo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
