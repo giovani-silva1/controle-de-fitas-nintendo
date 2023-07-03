@@ -1,10 +1,10 @@
 {
   "name": "controle-fitas-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "deploy:fitas": "ng build --configuration production --base-href=/controle-de-fitas-nintendo/",
+    "deploy:fitas": "ng build --configuration production --output-path docs --base-href=/controle-de-fitas-nintendo/",
     "ghpages": "angular-cli-ghpages --dir=dist/controle-de-fitas-nintendo",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
